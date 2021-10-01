@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+.inputdiv{
+    width: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.textField{
+    width: 100% !important;
+    margin-right: 0.4rem !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+Button{
+    font-family: 'Nunito', sans-serif !important;
+    font-style: normal !important;
+}

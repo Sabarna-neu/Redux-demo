@@ -1,0 +1,22 @@
+.strikethrough{
+    text-decoration: line-through !important;
+
+}
+
+.buttonList{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+ 
+}
+
+.buttonList Button{
+    margin:0 0.3rem;
+}
+
+ListsTheme ListItem{
+    background: red !important;
+}
+
