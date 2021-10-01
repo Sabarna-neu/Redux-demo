@@ -17,13 +17,6 @@ const todoSlice = createSlice({
                 }
             }
         },
-        editTask:(state, action)=>{
-            for(let i of state.items){
-                if(i.id === action.payload.id){
-                    i.value = action.payload.value;
-                }
-            }
-        },
         deleteTask : (state,action)=>{
             const filteredList = state.items.filter(item=> item.id !== action.payload);
             state.items = filteredList;
@@ -31,6 +24,6 @@ const todoSlice = createSlice({
     }
 })
 
-export const {addItem, completedTask,editTask, deleteTask} = todoSlice.actions
+export const {addItem, completedTask, deleteTask} = todoSlice.actions
 export default todoSlice.reducer;
  
