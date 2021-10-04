@@ -5,10 +5,10 @@ import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import {addItem, editTask} from '../../reducers/TodoReducer';
+import {addItem} from '../../reducers/todoActions';
 
 const Input = () => {
-    const todo = useSelector(state => state.todo);
+    const items = useSelector(state => state.items);
     
     
     const [todoItem, setTodoItem] = useState('');

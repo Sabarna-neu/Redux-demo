@@ -1,0 +1,6 @@
+export const FETCH_USERS = 'FETCH_USERS'
+export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS'
+export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE';
+export const ADD_ITEM = 'ADD_ITEM';
+export const COMPLETED_TASK = 'COMPLETED_TASK';
+export const DELETE_TASK = 'DELETE_TASK';

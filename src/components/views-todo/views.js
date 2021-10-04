@@ -6,16 +6,16 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ButtonIcon from '../ButtonIcon';
 import ListsTheme from '../ListsTheme';
 import { useSelector, useDispatch } from 'react-redux';
-import { completedTask, deleteTask } from '../../reducers/TodoReducer';
+import { completedTask, deleteTask } from '../../reducers/todoActions';
 import classes from './views.module.css';
 
 function Views() {
 
     const [status, setStatus] = useState('');
-    const todo = useSelector(state => state.todo)
+    const list = useSelector(state => state.items)
 
-    const list = todo.items;
-
+    console.log(list);
+    
     const dispatch = useDispatch();
 
     let AllListContent = <List>
@@ -47,8 +47,6 @@ function Views() {
                 return (
                     <ListItem >
                         <ListItemText key={i.id} primary={i.value} />
-                        <ButtonIcon> <DeleteIcon onClick={() => dispatch(deleteTask(i.id))} /> </ButtonIcon>
-                        <ButtonIcon onClick={() => dispatch(completedTask(i.id))} > <CheckIcon /> </ButtonIcon>
                     </ListItem>
                 )
             }
