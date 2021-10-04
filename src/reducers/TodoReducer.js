@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_TASK, COMPLETED_TASK, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from "./todoType"
+import { ADD_TASK, DELETE_TASK, COMPLETED_TASK, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from "./todoType"
 const initialState = {
     items: [],
     users: {},
@@ -8,7 +8,7 @@ const initialState = {
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_ITEM: console.log("ADD item case called");
+        case ADD_TASK: console.log("ADD item case called");
             return {
                 ...state,
                 items: [...state.items, { id: Math.random() * 10, value: action.payload, status: 0 }]
@@ -19,11 +19,11 @@ const todoReducer = (state = initialState, action) => {
                     i.status = 1;
                 }
             }
-            return { ...state };
+            return state;
         case DELETE_TASK: const filteredList = state.items.filter(item => item.id !== action.payload);
             state.items = filteredList;
             return { ...state, items: filteredList };
-            
+
         case FETCH_USERS_SUCCESS: return {
             ...state,
             loading:false,
