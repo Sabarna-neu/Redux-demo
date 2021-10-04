@@ -1,7 +1,7 @@
-import { ADD_ITEM, DELETE_TASK, COMPLETED_TASK, FETCH_USERS, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from "./todoType"
-export const addItem = (value)=>{
+import { ADD_TASK, DELETE_TASK, COMPLETED_TASK, FETCH_USERS, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from "./todoType"
+export const addTask = (value)=>{
     return {
-        type: ADD_ITEM,
+        type: ADD_TASK,
         payload:value
     }
 }

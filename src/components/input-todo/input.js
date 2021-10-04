@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import {addItem} from '../../reducers/todoActions';
+import {addTask} from '../../reducers/todoActions';
 
 const Input = () => {
     const items = useSelector(state => state.items);
@@ -41,7 +41,7 @@ const Input = () => {
     const onSubmitHandler = () => {
         // addItem(item);
         setTodoItem('');
-        dispatch(addItem(todoItem));
+        dispatch(addTask(todoItem));
     }
     
     return (
